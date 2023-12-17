@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+:root {
+  --head-bg: #1f1e1e;
+  overflow: scroll; 
+}
+* { 
+  font-family: 'JetBrains Mono', monospace;
+}
+body {
+  background-color: rgb(46, 46, 46);
+  color: #ffffff;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background: transparent; /* make scrollbar transparent */
+  }
+.header {
+  height: 90vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 150px;
+
+}
