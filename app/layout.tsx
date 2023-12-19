@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { useEffect } from 'react';
 import Image from 'next/image'
 import Script from 'next/script'
 import Head from 'next/head'
@@ -17,16 +18,25 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+ 
+
   return (
+    
     <html lang="pl" className='scroll-smooth'>
-       <body>
-         {children}
+      <Head>
+        {/* Other head elements */}
+        <Script src="https://cdn.jsdelivr.net/npm/fireworks@2.1.8/dist/fireworks.min.js"></Script>
+      </Head>
+      <body>
+        {children}
         <footer className='w-full pt-5 pb-5'>
-            <p className='text-gray-600 text-center'> Stworzone z 🪐 przez <a href="https://github.com/doniczek" className='text-green-200 hover:text-green-400'>@doniczka</a></p>
+          <p className='text-gray-600 text-center'> Stworzone z 🪐 przez <a href="https://github.com/doniczek" className='text-green-200 hover:text-green-400'>@doniczka</a></p>
         </footer>
 
-        <Script src='https://app.embed.im/snow.js'></Script>
-        </body>
+        
+        <Script src="https://cdn.jsdelivr.net/npm/fireworks@2.1.8/dist/fireworks.min.js"></Script>
+     
+      </body>
     </html>
   )
 }

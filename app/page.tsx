@@ -4,6 +4,7 @@ import Head from 'next/head'
 import { NextUIProvider } from "@nextui-org/react";
 import { Card, CardHeader, CardBody, CardFooter, Divider, Link, Image, Chip } from "@nextui-org/react";
 import { Avatar, AvatarGroup, AvatarIcon } from "@nextui-org/avatar";
+import  Script from "next/script";
 export default function Home() {
   const [currentTime, setCurrentTime] = React.useState<string>(getCurrentTime());
 
@@ -30,7 +31,13 @@ export default function Home() {
   }
 
   return (
+
     <NextUIProvider>
+      <Head>
+        {/* Other head elements */}
+        <Script src="https://cdn.jsdelivr.net/npm/fireworks@2.1.8/dist/fireworks.min.js"></Script>
+      </Head>
+
       <div className="min-h-screen flex items-center justify-center">
         <Card className="max-w-[1200px] max-h-[200px] h-94">
           <CardHeader className="flex gap-3">
@@ -54,11 +61,11 @@ export default function Home() {
                 </Chip>
                 <Chip avatar={<Avatar name="JS" src='https://th.bing.com/th/id/R.41ab93134d63c714a37f5c5a6c560faa?rik=VidAiYGI4alD%2bw&pid=ImgRaw&r=0' />} variant="flat" color="warning"
                 >
-              Javascript</Chip>
-              <Chip avatar={<Avatar name="React" src='https://cdn.discordapp.com/attachments/623564778379673630/1186093293512167515/OIP.png?ex=6591fe75&is=657f8975&hm=58399a4e5a2fce2971b8fced2a8b67fa2c18467154f404fbbf7240b85187014e&' />} variant="flat" color="secondary"
+                  Javascript</Chip>
+                <Chip avatar={<Avatar name="React" src='https://cdn.discordapp.com/attachments/623564778379673630/1186093293512167515/OIP.png?ex=6591fe75&is=657f8975&hm=58399a4e5a2fce2971b8fced2a8b67fa2c18467154f404fbbf7240b85187014e&' />} variant="flat" color="secondary"
                 >
-              React</Chip>
-              
+                  React</Chip>
+
               </div>
             </div>
           </CardHeader>
@@ -82,7 +89,7 @@ export default function Home() {
             >
               discord
             </Link>
-        
+
           </CardFooter>
         </Card>
 
