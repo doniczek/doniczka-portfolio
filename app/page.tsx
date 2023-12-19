@@ -4,7 +4,8 @@ import Head from 'next/head'
 import { NextUIProvider } from "@nextui-org/react";
 import { Card, CardHeader, CardBody, CardFooter, Divider, Link, Image, Chip } from "@nextui-org/react";
 import { Avatar, AvatarGroup, AvatarIcon } from "@nextui-org/avatar";
-import  Script from "next/script";
+import Script from "next/script";
+import { Fireworks } from 'fireworks-js'
 export default function Home() {
   const [currentTime, setCurrentTime] = React.useState<string>(getCurrentTime());
 
@@ -33,12 +34,7 @@ export default function Home() {
   return (
 
     <NextUIProvider>
-      <Head>
-        {/* Other head elements */}
-        <Script src="https://cdn.jsdelivr.net/npm/fireworks@2.1.8/dist/fireworks.min.js"></Script>
-      </Head>
-
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center dark">
         <Card className="max-w-[1200px] max-h-[200px] h-94">
           <CardHeader className="flex gap-3">
             <Image

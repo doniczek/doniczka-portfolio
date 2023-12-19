@@ -1,13 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 :root {
   --head-bg: #1f1e1e;
   overflow: scroll; 
 }
 * { 
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
 }
 body {
   background-color: rgb(46, 46, 46);
@@ -16,7 +16,7 @@ body {
 ::-webkit-scrollbar {
   width: 0px;
   height: 0px;
-  background: transparent; /* make scrollbar transparent */
+  background: transparent;
   }
 .header {
   height: 90vh;
