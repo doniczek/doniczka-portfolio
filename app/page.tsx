@@ -1,11 +1,8 @@
 'use client'
 import * as React from "react";
-import Head from 'next/head'
 import { NextUIProvider } from "@nextui-org/react";
 import { Card, CardHeader, CardBody, CardFooter, Divider, Link, Image, Chip } from "@nextui-org/react";
 import { Avatar, AvatarGroup, AvatarIcon } from "@nextui-org/avatar";
-import Script from "next/script";
-import { Fireworks } from 'fireworks-js'
 export default function Home() {
   const [currentTime, setCurrentTime] = React.useState<string>(getCurrentTime());
 
